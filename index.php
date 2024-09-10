@@ -254,8 +254,11 @@ function checkScope(){
 
 echo $globalVariable;
 
+// file読み込み
 
+require 'common/common.php';
 
+echo $$globalVariable;
 
 
 
