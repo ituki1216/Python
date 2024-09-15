@@ -204,7 +204,17 @@ echo mb_strlen($text);
 $str = '文字列を置換します'
 str_replace('あいう', 'あさふぁお', $str)
 
+// 指定文字列で分割
+var_dump($str_2) = '指定文字列で分割'
+explod(',', $str);
 
+// 正規表現
+//文字かどうか
+//数字かどうか
+//郵便番号
+//メールアドレスか
+$str = 'ばんちゃい'
+echo preg_match('文字列/,$str')
 
 
 
