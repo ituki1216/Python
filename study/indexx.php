@@ -261,6 +261,12 @@ require 'common/common.php';
 echo $$globalVariable;
 
 
+$test = 123;
+$test_2 = 4556;
+
+echo $test;
+exit;
+echo $test_2   // 456表示されません
 
 
 
