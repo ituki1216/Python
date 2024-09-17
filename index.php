@@ -169,19 +169,30 @@ if ($signal === 'red'){
     echo '進め'
 };
 
+function Home(){
+    echo 'おかえりなさい';
+}
 
+Home();
 
+$comment = 'コメント2'
+function getComment($string){
+    echo $string;
+}
 
+getComment('$comment3');
 
+function getNumberOfComment(){
+    return 5;
+}
 
+function sumPrice($int1, $int2){
+    $int3 = $int1 + $int2;
+    return $int3
+}
 
-
-
-
-
-
-
-
+$total = sumPrice(3, 5);
+echo $total
 
 
 
