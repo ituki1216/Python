@@ -209,7 +209,7 @@ str_replace('あいう', 'あさふぁお', $str)
 // 指定文字列で分割
 
 var_dump($str_2) = '指定文字列で分割'
-explod(',', $str);
+expload(',', $str);
 
 // 正規表現
 //文字かどうか
@@ -231,6 +231,7 @@ $array_push($array, '金平糖', '糖尿病')
 
 $postalCode = '123-4567';
 
+
 function checkPostalCode(){ // -消す
     $replaced = str_replace('-', '',$str);
     $length = strlen($replaced);
@@ -244,9 +245,14 @@ function checkPostalCode(){ // -消す
 var_dump(checkPostalCode($postalCode));
 
 
+$globalVariable = 'グローバル変数';
 
+function checkScope(){
+    $localVariable = 'ローカル変数';
+    echo $$localVariable
+}
 
-
+echo $globalVariable;
 
 
 
