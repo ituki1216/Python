@@ -229,10 +229,19 @@ $array = ['リンゴ', 'ミカン'];
 
 $array_push($array, '金平糖', '糖尿病')
 
+$postalCode = '123-4567';
 
+function checkPostalCode(){ // -消す
+    $replaced = str_replace('-', '',$str);
+    $length = strlen($replaced);
 
+    if($length === 7){
+        return true;
+    }
+    return false;
+}
 
-
+var_dump(checkPostalCode($postalCode));
 
 
 
