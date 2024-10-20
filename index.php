@@ -155,9 +155,19 @@ switch($date){
 
 }
 
+if($date === 1){
+    echo '1'
+}
 
+$signal = 'red';
 
-
+if ($signal === 'red'){
+    echo 'とまれ'
+}else if ($signal === "yellow"){
+    echo '一旦停止'
+}else{
+    echo '進め'
+};
 
 
 
