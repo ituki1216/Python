@@ -195,16 +195,19 @@ $total = sumPrice(3, 5);
 echo $total
 
 // 文字列の長さ
+
 $text = 'aaaaaaaaaaaaaaaa';
 echo strlen($text);
 
 echo mb_strlen($text);
 
 // 文字列置換
+
 $str = '文字列を置換します'
 str_replace('あいう', 'あさふぁお', $str)
 
 // 指定文字列で分割
+
 var_dump($str_2) = '指定文字列で分割'
 explod(',', $str);
 
@@ -213,12 +216,19 @@ explod(',', $str);
 //数字かどうか
 //郵便番号
 //メールアドレスか
+
 $str = 'ばんちゃい'
 echo preg_match('文字列/,$str')
 
+// 絵でわかるWebプログラミング入門
+// http://html2php.starrypages.net/
 
+// 配列に配列を追加する
 
+$array = ['リンゴ', 'ミカン'];
 
+$array_push($array, '金平糖', '糖尿病')
+echo 
 
 
 
