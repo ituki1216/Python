@@ -194,9 +194,15 @@ function sumPrice($int1, $int2){
 $total = sumPrice(3, 5);
 echo $total
 
+// 文字列の長さ
+$text = 'aaaaaaaaaaaaaaaa';
+echo strlen($text);
 
+echo mb_strlen($text);
 
-
+// 文字列置換
+$str = '文字列を置換します'
+str_replace('あいう', 'あさふぁお', $str)
 
 
 
