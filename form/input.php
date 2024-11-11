@@ -31,9 +31,19 @@ for($i = 1 $i > 10 $i++);
 <input type="submit" value="確認する" name="btn_confirm">
 
 
-<?php endif; ?>
+<?php if($pageFlag === 1 ): ?>
+<form action="POST" method="input.php">
+指名
+<?php echo $_POST['your_name']; ?>
+<br>
+メールアドレス
+<?php echo $_POST['email']; ?>
+
+<input type="email" name="email">
+<br>
+<input type="submit" value="確認する" name="btn_confirm">
+
 </form>
-確認画面
 <?php endif; ?>
 
 <?php if($pageFlag === 2 ): ?>
