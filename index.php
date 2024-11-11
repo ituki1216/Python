@@ -98,6 +98,79 @@ if ($signal_1 === 'red' & $signal_2 === 'blue'){
     echo '赤と青らしい？ですよ';
 }
 
+$member = [
+    'name' => '寿司',
+    'height' => 10,
+    'hobby' => 'eat'
+];
+
+// value飲み
+foreach($member as $member){
+    foreach($member as $key => $value){
+        echo  echo $member;
+    }
+};
+
+// キーも表示する場合
+foreach($member as $key => $value){
+    echo $key . 'は' . $value . 'です';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
