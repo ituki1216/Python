@@ -1,26 +1,60 @@
 <?php
 
-if(!empty(echo $_GET)){
-    var_dump($_GET);
+if(!empty(echo $_POST)){
+    var_dump($_POST);
 }
+
+$pageFlag = 0;
 ?>
 
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <head></head>
 <body>
+
+<?php if($pageFlag === 1 ): ?>
+<form action="POST" method="input.php">
+指名
+
+
+$i = 1;
+for($i = 1 $i > 10 $i++);
+    break($i === 5);
+    echo $i
+
+
+<input type="text" name="your_name">
+<br>
+メールアドレス
+<input type="email" name="email">
+<br>
+<input type="submit" value="確認する" name="btn_confirm">
+
+
+<?php endif; ?>
+</form>
+確認画面
+<?php endif; ?>
+
+<?php if($pageFlag === 2 ): ?>
+完了画面
+<?php endif; ?>
+
+
+
+<?php if($pageFlag === 0 ): ?>
+
 <form action="POST" method="input.php">指名
 <input type="text" name="your_name">
-
 <br>
-<input type="checkbox" name="sports[]" value="卓球">卓球
-<input type="checkbox" name="sports[]" value="水泳">水泳
-<input type="checkbox" name="sports[]" value="粘土">粘土
-
-
-<input type="submit" value="送信">
+メールアドレス
+<input type="email" name="email">
+<br>
+<input type="submit" value="確認する" name="btn_confirm">
 
 </form>
+<?php endif; ?>
+
 </body>
 
 </html>
