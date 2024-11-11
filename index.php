@@ -228,7 +228,7 @@ echo preg_match('文字列/,$str')
 $array = ['リンゴ', 'ミカン'];
 
 $array_push($array, '金平糖', '糖尿病')
-echo 
+
 
 
 
