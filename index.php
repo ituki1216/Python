@@ -116,10 +116,25 @@ foreach($member as $key => $value){
     echo $key . 'は' . $value . 'です';
 }
 
+for($i = 0; $i < 10; $i++){
+    if($i === 5){
+        //break
+        continue;
+    }
+    echo $i;
+}
 
+$i = 0;
+while($i < 5){
+    echo $il
+    $i++;
+}
 
+// for 繰り返す数が決まっていたら
+// while 繰り返す数が決まっていなかったら
 
-
+do{echo $i}
+while($i < 5);
 
 
 
