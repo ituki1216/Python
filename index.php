@@ -30,10 +30,41 @@ $array_member = [
 ];
 
 echo $array_member['sei'];
-//man
+$array_member_2 = [
+    '山中' => [
+        'height' => 180,
+        'hobby' => "LOL",
+        'sei' => "man"
+    ], 
+    '坂本' => [
+        'height' => 120,
+        'hobby' => "toi",
+        'sei' => "girl"
+    ]
+];
+
+$array_member_3 = [
+    "1組" => [
+        '一樹' => [
+            'height' => 200
+            'hobby' => 'サッカー'
+        ],
+        '山中' => [
+            'height' => 5000
+            'hobby' => '寝る'
+        ];
+    ];
+    "2組" => [
+        '太郎' => [
+            'height' => 122
+            'hobby' => "game"
+        ], "和中"
+    ];
+];
 
 
-
+echo $array_member_2['山中']['hobby']
+echo $array_member_3['太郎']['hobby']
 
 
 
