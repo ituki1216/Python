@@ -66,8 +66,10 @@ $array_member_3 = [
 echo $array_member_2['山中']['hobby']
 echo $array_member_3['太郎']['hobby']
 
-
-
+$height = 100;
+if ($height === 100){
+    echo "身長は" . $height . "cmです"
+}
 
 
 
