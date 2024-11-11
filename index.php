@@ -83,4 +83,24 @@ if ($signal === 'red'){
     echo '進め'
 };
 
+$test = "1";
+
+if(!empty($test)){
+    echo '変数の値は空ではなかったようです';
+}else{
+    echo '変数は空です'
+}
+
+$signal_1 = 'red';
+$signal_2 = 'blue';
+
+if ($signal_1 === 'red' & $signal_2 === 'blue'){
+    echo '赤と青らしい？ですよ';
+}
+
+
+
+
+
+
 ?>
