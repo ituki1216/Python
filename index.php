@@ -22,4 +22,22 @@ $array_2 = [
 echo $array = [1];
 
 echo $array_2 = [1][2];
+
+$array_member = [
+    "name" => '山中',
+    'height' => '190'
+    'sei' => 'man'
+];
+
+echo $array_member['sei'];
+//man
+
+
+
+
+
+
+
+
+
 ?>
