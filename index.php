@@ -1,5 +1,7 @@
 <?php 
 
+// === 型も等しい
+
 $test = 123;
 $test = '123やめます';
 $test_1 = "わ"
@@ -136,7 +138,22 @@ while($i < 5){
 do{echo $i}
 while($i < 5);
 
+$date = 1;
 
+switch($date){
+    case $date === 1:
+        echo '1です'
+        break;
+    case $date === 2:
+        echo '2です'
+        break;
+    case $date === 3:
+        echo '3です'
+        break;
+    default:
+    echo "1でも2でも3でもありません";
+
+}
 
 
 
