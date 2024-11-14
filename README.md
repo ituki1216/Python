@@ -15,3 +15,18 @@ laravel new contact-form
 cd cotact-form
 npm install && npm run build
 composer run dev      // 開発サーバーを起動するとhttp://localhost:8000からアクセス
+
+6, Laravelフレームワークの全ての設定はconfif fileに含まれている
+
+7, laravelロジックの一連の流れ
+request-routing-validation-conatoll-view-response?
+
+8, laravelアプリケーションを作成したら次はdatabaseに保存する
+.envでは初期はsqliteを指定しているので、MySqlに変更したい場合は.envの中身を変更して適切なdatabaseを使用できるようにする
+もしMySqlを使用したい場合は.envファイルのDB_*変数を以下のように変更します
+DB_CONECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
