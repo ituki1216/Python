@@ -6,7 +6,7 @@ public function up()
     $table->string('email');
     $table->text('message');
     $table->timestamps(); // create_atとupdate_atというカラムを生成し、作成された日と更新された日を自動的に管理します
-  ));
+  });
 }
 
 public function down() // Laravelのdownメソッドはロールバック時に実行される処理を記載する
