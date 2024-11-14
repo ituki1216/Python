@@ -30,3 +30,6 @@ DB_PORT=3306
 DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=
+
+9, Sqlite以外のデータベースを使用する場合はdatabase変数を変更後、migrationを行う必要がある
+php artisan migrate
