@@ -33,3 +33,10 @@ DB_PASSWORD=
 
 9, Sqlite以外のデータベースを使用する場合はdatabase変数を変更後、migrationを行う必要がある
 php artisan migrate
+
+10, Laravelのすべてのアプリケーションのエントリーポイントはpublic/index.phpファイルです
+index.phpはConpsoerで生成したオートローダ定義をロードし、LaravelアプリケーションのインスタンスをBootstrap/app.phpから取得します
+laravel自体が最初にとるアクションはアプリケーション/サービスコンテナのインスタンスを生成することです
+Composerオートローダーのロード
+php
+require __DIR__.'/../vendor/autoload.php';
