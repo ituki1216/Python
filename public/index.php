@@ -9,7 +9,6 @@
   <h1>お問い合わせ</h1>
 
   <?php 
-  $errorMessage = "aaa"
   if isset($successMessage)) { 
     echo $successMessage;
   }elseif (isset($errorMessage)) {
