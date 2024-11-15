@@ -14,7 +14,7 @@
   }elseif (isset($errorMessage)) {
     echo $errorMessage;
   }
-      ?>
+ ?>
     
   <form action="form.php" method="POST">
       <label for="name">名前:</lavel>>br>
