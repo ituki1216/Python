@@ -16,15 +16,14 @@
   }
   ?>
 
-    
   <form action="form.php" method="POST">
-      <label for="name">名前:</lavel>>br>
+      <label for="name">名前:</label><br>
       <input type="text" id="name" name="name" required><br>
 
-      <label for="mail_address">メールアドレス:</lavel>>br>
+      <label for="mail_address">メールアドレス:</label><br>
       <input type="text" id="mail_address" name="mail_address" required><br>
 
-      <label for="message">メッセージ:</lavel>>br>
+      <label for="message">メッセージ:</label><br>
       <input type="text" id="message" name="message" required><br>
 
       <input type="submit" value="送信">
