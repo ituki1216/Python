@@ -8,13 +8,14 @@
 <body>
   <h1>お問い合わせ</h1>
 
-  <?php 
+   <?php 
   if (isset($successMessage)) { 
     echo $successMessage;
-  }elseif (isset($errorMessage)) {
+  } elseif (isset($errorMessage)) {
     echo $errorMessage;
   }
- ?>
+  ?>
+
     
   <form action="form.php" method="POST">
       <label for="name">名前:</lavel>>br>
