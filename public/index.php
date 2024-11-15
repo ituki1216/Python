@@ -7,6 +7,15 @@
 </head>
 <body>
   <h1>お問い合わせ</h1>
+
+  <?php 
+  $errorMessage = "aaa"
+  if isset($successMessage)) { 
+    echo $successMessage;
+  }elseif (isset($errorMessage)) {
+    echo $errorMessage;
+  }
+    
   <form action="form.php" method="POST">
       <lavel for="name">名前:</lavel>>br>
       <input type="text" id="name" name="name" required><br>
