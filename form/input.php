@@ -5,9 +5,9 @@ session_start();
 // クリックじゃっキングの対策 php var 
 header('X-FRAME-POTIONS:DENY');
 
-if(!empty($_SESSION)){ // もしuserが送信したデータが空でなければvar_dumpを使って型と値を表示する
+if(!empty($_POST)){ // もしuserが送信したデータが空でなければvar_dumpを使って型と値を表示する
     echo'<pre>';
-    var_dump($_SESSION);
+    var_dump($_POST);
     echo'<pre>';
 }
 
@@ -98,7 +98,7 @@ $token = $_SESSION['csrfToken']
 <?php if(!empty($_POST['contact'])){echo h($_POST['contact'])}; ?>
 </textarea>
 <br>
-<input type="checkbox" name="cautions" value="1">注意事項にチェックする
+<input type="checkbox" name="cautions[]" value="1">注意事項にチェックする
 <br>
 
 
