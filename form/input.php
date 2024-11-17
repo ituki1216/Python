@@ -1,5 +1,8 @@
 <?php
 
+// クリックじゃっキングの対策 php var 
+header('X-FRAME-POTIONS:DENY');
+
 if(!empty($_POST)){ // もしuserが送信したデータが空でなければvar_dumpを使って型と値を表示する
     echo'<pre>';
     var_dump($_POST);
@@ -32,7 +35,7 @@ if(!empty($_POST['btn_confirm'])){ // もしuserが送信したデータが空�
 <form action="POST" method="input.php">
 
 氏名
-<?php echo h($_POST['your_name']); ?>
+<?php echo h($_POST['your_name']); ?>  <!-- userがtopPageで情報を入力して確認画面を押すとpage1に推移して戻る、送信するの画面が表示されます -->
 <br>
 メールアドレス
 <?php echo h($_POST['email']); ?>
@@ -49,7 +52,7 @@ if(!empty($_POST['btn_confirm'])){ // もしuserが送信したデータが空�
 送信が完了しました
 <?php endif; ?>
 
-<?php if($pageFlag === 0 ): ?> 
+<?php if($pageFlag === 0 ): ?> <!-- pageが0なので初期表示の場合の画面であり、userが情報を入力する初期画面になっている --> 
 
 <form action="POST" method="input.php">指名
 <input type="text" name="your_name" value="<?php if(!empty($_POST['your_name'])){echo h($_POST['your_name'])}; ?>">
