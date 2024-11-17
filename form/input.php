@@ -1,22 +1,22 @@
 <?php
 
-if(!empty($_POST)){
+if(!empty($_POST)){ // もしuserが送信したデータが空でなければvar_dumpを使って型と値を表示する
     echo'<pre>';
     var_dump($_POST);
     echo'<pre>';
 }
 
 function h($str){
-    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8'); // 攻撃対策てきな？
 }
 
-$pageFlag = 0;
+$pageFlag = 0; // 変数pageFlagを初期化します
 
-if(!empty($_POST['btn_confirm'])){
+if(!empty($_POST['btn_confirm'])){ // もしuserが送信したデータが空ではなく、なおかつ確認するボタンをクリックしたらpageを1にします
     $pageFlag = 1;
 }
 
-if(!empty($_POST['btn_confirm'])){
+if(!empty($_POST['btn_confirm'])){ // もしuserが送信したデータが空ではなく、尚且つ確認buttonが押されたら1と合わせてpageFlag2も表示します
     $pageFlag = 2;
 }
 
@@ -24,11 +24,11 @@ if(!empty($_POST['btn_confirm'])){
 
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<head></head>
+<head>むずい</head>
 <body>
 
 
-<?php if($pageFlag === 1 ): ?>
+<?php if($pageFlag === 1 ): ?> <!-- pageFlag1は確認画面です -->
 <form action="POST" method="input.php">
 
 氏名
@@ -49,10 +49,9 @@ if(!empty($_POST['btn_confirm'])){
 送信が完了しました
 <?php endif; ?>
 
-<?php if($pageFlag === 0 ): ?>
+<?php if($pageFlag === 0 ): ?> 
 
-<form action="POST" method="input.php">
-指名
+<form action="POST" method="input.php">指名
 <input type="text" name="your_name" value="<?php if(!empty($_POST['your_name'])){echo h($_POST['your_name'])}; ?>">
 <br>
 メールアドレス
