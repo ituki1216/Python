@@ -266,16 +266,41 @@ $test_2 = 4556;
 echo $test;
 exit;
 echo $test_2   // 456表示されません
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
+
+<?php
+
+session_start();
+require 'validation.php';
+
+header('X-FRAME-POTIONS: DENY');
+
+if(!empty($_POST)){
+    echo'<pre>';
+    var_dump($_POST);
+    echo'</pre>'
+}
+
+function h($str){
+    return htmlspecialchars($str. ENT_QUOTES, 'UTF-8');
+}
+
+$pageFlag = 0;
+$error = validation($_POST);
+
+if(!empty($_POST['bnt_confirm']) && empty($error) {
+    $pageFlag = 1;
+})
+
+if(!empty($_POST['bnt_confirm'])){
+    $pageFLag = 2;
+}
+
+<?php if ($pageFlag === 1): ?>
+    <form action="" method="POST">
+        <p>氏名: <?php echo h($_POST['your_name']); ?></p>
+    </form>
+
+<?php if($pageFlag === 2); ?>
+    <p>送信が完了しました</p>
+<?php endif ?>
