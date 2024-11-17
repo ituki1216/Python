@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName 'IDとPASSWORDを入力してください'
+AuthUserFile /Applications/XAMP/htdocs/test.php
+require valid-user
