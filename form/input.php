@@ -1,11 +1,13 @@
 <?php
 
+session_start();
+
 // クリックじゃっキングの対策 php var 
 header('X-FRAME-POTIONS:DENY');
 
-if(!empty($_POST)){ // もしuserが送信したデータが空でなければvar_dumpを使って型と値を表示する
+if(!empty($_SESSION)){ // もしuserが送信したデータが空でなければvar_dumpを使って型と値を表示する
     echo'<pre>';
-    var_dump($_POST);
+    var_dump($_SESSION);
     echo'<pre>';
 }
 
@@ -32,6 +34,7 @@ if(!empty($_POST['btn_confirm'])){ // もしuserが送信したデータが空�
 
 
 <?php if($pageFlag === 1 ): ?> <!-- pageFlag1は確認画面です -->
+<?php if($POST['csrf'] === $SESSION['csrfToken']); ?>
 <form action="POST" method="input.php">
 
 氏名
@@ -44,15 +47,30 @@ if(!empty($_POST['btn_confirm'])){ // もしuserが送信したデータが空�
 <input type="submit" name="btn_submit" value="送信する">
 <input type="hidden" name="your_name" value="<?php echo h($_POST['your_name']); ?>">
 <input type="hidden" name="email" value="<?php echo h($_POST['email']); ?>">
+<input type="hidden" name="csrf" value="<?php echo h($_POST['csrf']); ?>">
 </form>
 
 <?php endif; ?>
-
-<?php if($pageFlag === 2 ): ?>
-送信が完了しました
 <?php endif; ?>
 
+<?php if($pageFlag === 2 ): ?>
+<?php if($POST['csrf'] === $SESSION['csrfToken']); ?>
+
+送信が完了しました
+
+<?php unset($SESSION['csrfToken']); ?>
+<?php endif; ?>
+<?php endif; ?>
+
+
 <?php if($pageFlag === 0 ): ?> <!-- pageが0なので初期表示の場合の画面であり、userが情報を入力する初期画面になっている --> 
+<?php 
+if(!isset($_SESSION['csrfToken'])){
+    $csrfToken = echo bin2hex(random_bytes(32));
+    $_SESSION['csrfToken'] = $csrfToken;
+}
+$token = $_SESSION['csrfToken']
+?>
 
 <form action="POST" method="input.php">指名
 <input type="text" name="your_name" value="<?php if(!empty($_POST['your_name'])){echo h($_POST['your_name'])}; ?>">
@@ -60,8 +78,10 @@ if(!empty($_POST['btn_confirm'])){ // もしuserが送信したデータが空�
 メールアドレス
 <input type="email" name="email" value="<?php if(!empty($_POST['email'])){echo h($_POST['email'])}; ?>">
 <br>
-<input type="submit" value="確認する" name="btn_confirm">
+<input type="submit" value="確認する" name="btn_confirm" value="確認する">
+<input type="hidden" name="csrf" value="<?php echo $token; ?>">
 </form>
+
 <?php endif; ?>
 
 </body>
