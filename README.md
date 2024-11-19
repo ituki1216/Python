@@ -67,5 +67,18 @@ storageディレクトリ
 storageディレクトリには、ログ、コンパイル済みBladeテンプレート、ファイルベースのセッション、ファイルキャッシュ、およびフレームワークが作成したその他のファイルが含まれます。このディレクトリは、app、framework、logsディレクトリに分離されています。appディレクトリは、アプリケーションが作成したファイルを保存するために使用できます。frameworkディレクトリは、フレームワークが作成したファイルとキャッシュを保存するために使用します。最後に、logsディレクトリにはアプリケーションのログファイルを保存しています。
 storage/app/publicディレクトリは、プロファイルアバターなど、一般にアクセス可能である必要のあるユーザー生成ファイルを保存するために使用します。このディレクトリを指すシンボリックリンクをpublic/storageに作成する必要があります。php artisan storage:link Artisanコマンドを使用してリンクを作成できます。
 
-testsディレクトリ
+HTML	PHP	Laravel	Web
+inputタグ	配列	requestオブジェクト	ステートレスサーバ
+hidden属性	連想配列	session	アーキテクチャスタイル
+Formタグ	多次元配列	bladeテンプレート	REST
+多次元連想配列	CRUD処理	Cookie
+ループ処理	Eloquent (ORM)	セッション状態
+多重ループ処理	Collection	HTTP
+array~~関数	Modelオブジェクト	HTTPメソッド
+各種の条件分岐	リファレンス渡し	オブジェクト指向
+flag指定	ドット記法	
+真偽値	MVC+Route	
+Laravel Collective	
+Formファサード	
+デバック方
 
